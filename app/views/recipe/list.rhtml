@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>All Recipes</title>
+</head>
+<body>
+
+<h1>Online Cookbook - All Recipes</h1>
+<table border="1">
+ <tr>
+  <td width="40%"><p align="center"><i><b>Recipe</b></i></td>
+  <td width="20%"><p align="center"><i><b>Category</b></i></td>
+  <td width="20%"><p align="center"><i><b>Date</b></i></td>
+ </tr>
+
+ <% @recipes.each do |recipe| %>
+  <tr>
+   <td><%= link_to recipe.title, :action => "show", :id => recipe.id %></td>
+   <td><%= recipe.category.name %></td>
+   <td><%= recipe.date %></td>
+  </tr>
+ <% end %>
+</table>
+<p><%= link_to "Create new recipe", :action => "new" %></p>
+
+</body>
+</html>

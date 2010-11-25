@@ -1,0 +1,477 @@
+
+
+Processing RecipesController#list (for 127.0.0.1 at 2010-11-24 19:31:56) [GET]
+  Session ID: 1b4e4a46eaa2b06ad6c23235aebe8fc7
+  Parameters: {"action"=>"list", "controller"=>"recipes"}
+  [4;36;1mSQL (0.000187)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRecipe Columns (0.000939)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000103)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000082)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipes
+Rendering recipes/list
+Completed in 0.04201 (23 reqs/sec) | Rendering: 0.01170 (27%) | DB: 0.00131 (3%) | 200 OK [http://localhost/]
+
+
+Processing RecipesController#new (for 127.0.0.1 at 2010-11-24 19:31:59) [GET]
+  Session ID: 1b4e4a46eaa2b06ad6c23235aebe8fc7
+  Parameters: {"action"=>"new", "controller"=>"recipes"}
+  [4;36;1mRecipe Columns (0.002059)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+Rendering  within layouts/recipes
+Rendering recipes/new
+Rendered recipes/_form (0.00960)
+Completed in 0.03924 (25 reqs/sec) | Rendering: 0.02184 (55%) | DB: 0.00206 (5%) | 200 OK [http://localhost/recipes/new]
+
+
+Processing RecipesController#list (for 127.0.0.1 at 2010-11-24 19:32:02) [GET]
+  Session ID: 1b4e4a46eaa2b06ad6c23235aebe8fc7
+  Parameters: {"action"=>"list", "controller"=>"recipes"}
+  [4;35;1mRecipe Columns (0.002005)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000209)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000158)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipes
+Rendering recipes/list
+Completed in 0.03863 (25 reqs/sec) | Rendering: 0.01997 (51%) | DB: 0.00237 (6%) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.000312)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRecipe Columns (0.002045)[0m   [0mSHOW FIELDS FROM recipes[0m
+
+
+Processing RecipesController#list (for 127.0.0.1 at 2010-11-24 19:57:43) [GET]
+  Session ID: 1b4e4a46eaa2b06ad6c23235aebe8fc7
+  Parameters: {"action"=>"list", "controller"=>"recipes"}
+  [4;36;1mRecipe Columns (0.000961)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000105)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000082)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipes
+Rendering recipes/list
+
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Options) on line #7 of app/views/recipes/list.rhtml:
+4:   <tr>
+5:   <% for column in Recipe.content_columns %>
+6:     <th><%= column.human_name %></th>
+7:     <th><%= Options %></td>
+8:   <% end %>
+9:   </tr>
+10:   
+
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:263:in `load_missing_constant'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:452:in `const_missing'
+    #{RAILS_ROOT}/app/views/recipes/list.rhtml:7:in `_run_rhtml_47app47views47recipes47list46rhtml'
+    #{RAILS_ROOT}/app/views/recipes/list.rhtml:5:in `each'
+    #{RAILS_ROOT}/app/views/recipes/list.rhtml:5:in `_run_rhtml_47app47views47recipes47list46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing RecipesController#list (for 127.0.0.1 at 2010-11-24 19:58:06) [GET]
+  Session ID: 1b4e4a46eaa2b06ad6c23235aebe8fc7
+  Parameters: {"action"=>"list", "controller"=>"recipes"}
+  [4;35;1mRecipe Columns (0.002236)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000272)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000160)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipes
+Rendering recipes/list
+
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Options) on line #7 of app/views/recipes/list.rhtml:
+4:   <tr>
+5:   <% for column in Recipe.content_columns %>
+6:     <th><%= column.human_name %></th>
+7:     <th><% Options %></td>
+8:   <% end %>
+9:   </tr>
+10:   
+
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:263:in `load_missing_constant'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:452:in `const_missing'
+    #{RAILS_ROOT}/app/views/recipes/list.rhtml:7:in `_run_rhtml_47app47views47recipes47list46rhtml'
+    #{RAILS_ROOT}/app/views/recipes/list.rhtml:5:in `each'
+    #{RAILS_ROOT}/app/views/recipes/list.rhtml:5:in `_run_rhtml_47app47views47recipes47list46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing RecipesController#list (for 127.0.0.1 at 2010-11-24 19:58:08) [GET]
+  Session ID: 1b4e4a46eaa2b06ad6c23235aebe8fc7
+  Parameters: {"action"=>"list", "controller"=>"recipes"}
+  [4;36;1mRecipe Columns (0.002201)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000198)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000155)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipes
+Rendering recipes/list
+
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Options) on line #7 of app/views/recipes/list.rhtml:
+4:   <tr>
+5:   <% for column in Recipe.content_columns %>
+6:     <th><%= column.human_name %></th>
+7:     <th><% Options %></td>
+8:   <% end %>
+9:   </tr>
+10:   
+
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:263:in `load_missing_constant'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:452:in `const_missing'
+    #{RAILS_ROOT}/app/views/recipes/list.rhtml:7:in `_run_rhtml_47app47views47recipes47list46rhtml'
+    #{RAILS_ROOT}/app/views/recipes/list.rhtml:5:in `each'
+    #{RAILS_ROOT}/app/views/recipes/list.rhtml:5:in `_run_rhtml_47app47views47recipes47list46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing RecipesController#list (for 127.0.0.1 at 2010-11-24 19:58:14) [GET]
+  Session ID: 1b4e4a46eaa2b06ad6c23235aebe8fc7
+  Parameters: {"action"=>"list", "controller"=>"recipes"}
+  [4;35;1mRecipe Columns (0.002256)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000229)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000161)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipes
+Rendering recipes/list
+
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Options) on line #7 of app/views/recipes/list.rhtml:
+4:   <tr>
+5:   <% for column in Recipe.content_columns %>
+6:     <th><%= column.human_name %></th>
+7:     <th><% Options %></td>
+8:   <% end %>
+9:   </tr>
+10:   
+
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:263:in `load_missing_constant'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:452:in `const_missing'
+    #{RAILS_ROOT}/app/views/recipes/list.rhtml:7:in `_run_rhtml_47app47views47recipes47list46rhtml'
+    #{RAILS_ROOT}/app/views/recipes/list.rhtml:5:in `each'
+    #{RAILS_ROOT}/app/views/recipes/list.rhtml:5:in `_run_rhtml_47app47views47recipes47list46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing RecipesController#list (for 127.0.0.1 at 2010-11-24 19:58:28) [GET]
+  Session ID: 1b4e4a46eaa2b06ad6c23235aebe8fc7
+  Parameters: {"action"=>"list", "controller"=>"recipes"}
+  [4;36;1mRecipe Columns (0.002115)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000191)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000159)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipes
+Rendering recipes/list
+Completed in 0.04603 (21 reqs/sec) | Rendering: 0.02680 (58%) | DB: 0.00247 (5%) | 200 OK [http://localhost/]
+
+
+Processing RecipesController#list (for 127.0.0.1 at 2010-11-24 19:58:58) [GET]
+  Session ID: 1b4e4a46eaa2b06ad6c23235aebe8fc7
+  Parameters: {"action"=>"list", "controller"=>"recipes"}
+  [4;35;1mRecipe Columns (0.002078)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000166)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipes
+Rendering recipes/list
+Completed in 0.03935 (25 reqs/sec) | Rendering: 0.02077 (52%) | DB: 0.00247 (6%) | 200 OK [http://localhost/]
+
+
+Processing RecipesController#list (for 127.0.0.1 at 2010-11-24 19:59:18) [GET]
+  Session ID: 1b4e4a46eaa2b06ad6c23235aebe8fc7
+  Parameters: {"action"=>"list", "controller"=>"recipes"}
+  [4;36;1mRecipe Columns (0.002221)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000224)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000191)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipes
+Rendering recipes/list
+Completed in 0.04301 (23 reqs/sec) | Rendering: 0.02286 (53%) | DB: 0.00264 (6%) | 200 OK [http://localhost/]
+
+
+Processing RecipesController#list (for 127.0.0.1 at 2010-11-24 19:59:46) [GET]
+  Session ID: 1b4e4a46eaa2b06ad6c23235aebe8fc7
+  Parameters: {"action"=>"list", "controller"=>"recipes"}
+  [4;35;1mRecipe Columns (0.001002)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000085)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipes
+Rendering recipes/list
+Completed in 0.02010 (49 reqs/sec) | Rendering: 0.01096 (54%) | DB: 0.00118 (5%) | 200 OK [http://localhost/]
+
+
+Processing RecipesController#list (for 127.0.0.1 at 2010-11-25 15:46:07) [GET]
+  Session ID: 6632bcb960dd650ae3a3295bb0ef46ed
+  Parameters: {"action"=>"list", "controller"=>"recipes"}
+  [4;36;1mSQL (0.000196)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRecipe Columns (0.001035)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.015554)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.011092)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipes
+Rendering recipes/list
+Completed in 0.09985 (10 reqs/sec) | Rendering: 0.02637 (26%) | DB: 0.02788 (27%) | 200 OK [http://localhost/]
+
+
+Processing RecipesController#new (for 127.0.0.1 at 2010-11-25 15:46:11) [GET]
+  Session ID: 6632bcb960dd650ae3a3295bb0ef46ed
+  Parameters: {"action"=>"new", "controller"=>"recipes"}
+  [4;36;1mRecipe Columns (0.002043)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+Rendering  within layouts/recipes
+Rendering recipes/new
+Rendered recipes/_form (0.04010)
+Completed in 0.07010 (14 reqs/sec) | Rendering: 0.05276 (75%) | DB: 0.00204 (2%) | 200 OK [http://localhost/recipes/new]
+
+
+Processing RecipesController#list (for 127.0.0.1 at 2010-11-25 15:46:13) [GET]
+  Session ID: 6632bcb960dd650ae3a3295bb0ef46ed
+  Parameters: {"action"=>"list", "controller"=>"recipes"}
+  [4;35;1mRecipe Columns (0.002965)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000280)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000208)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipes
+Rendering recipes/list
+Completed in 0.03853 (25 reqs/sec) | Rendering: 0.01823 (47%) | DB: 0.00345 (8%) | 200 OK [http://localhost/]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2010-11-25 15:46:16) [GET]
+  Session ID: 6632bcb960dd650ae3a3295bb0ef46ed
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"recipes"}
+  [4;36;1mRecipe Columns (0.001123)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mRecipe Load (0.045989)[0m   [0mSELECT * FROM recipes WHERE (recipes.`id` = 2) [0m
+Rendering  within layouts/recipes
+Rendering recipes/show
+Completed in 0.17854 (5 reqs/sec) | Rendering: 0.00865 (4%) | DB: 0.04711 (26%) | 200 OK [http://localhost/recipes/show/2]
+
+
+Processing RecipesController#list (for 127.0.0.1 at 2010-11-25 15:46:19) [GET]
+  Session ID: 6632bcb960dd650ae3a3295bb0ef46ed
+  Parameters: {"action"=>"list", "controller"=>"recipes"}
+  [4;36;1mRecipe Columns (0.002577)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000348)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000210)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipes
+Rendering recipes/list
+Completed in 0.04494 (22 reqs/sec) | Rendering: 0.02113 (47%) | DB: 0.00313 (6%) | 200 OK [http://localhost/]
